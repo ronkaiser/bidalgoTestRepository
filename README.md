@@ -1,0 +1,2 @@
+# bidalgoTestRepository
+CI/CD
