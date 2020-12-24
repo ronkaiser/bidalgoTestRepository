@@ -3,7 +3,7 @@ pipeline {
   stages{
     stage('commitlogger') {
       steps {
-	sh 'echo $GIT_COMMIT'
+	sh 'echo $GIT_MESSAGE'
         sh 'printenv'
         sh 'python3 ./commitLogger.py'
       }
