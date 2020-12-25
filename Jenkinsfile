@@ -3,6 +3,7 @@ pipeline {
   stages{
     stage('commitlogger') {
       steps {
+	sh 'pwd'
         sh 'printenv'
         sh 'python3 ./commitLogger.py'
       }
