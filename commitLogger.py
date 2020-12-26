@@ -12,11 +12,11 @@ mydb = mysql.connector.connect(
 
 mycursor = mydb.cursor()
 
-mycursor.execute("CREATE TABLE IF NOT EXISTS commits (
+mycursor.execute("""CREATE TABLE IF NOT EXISTS commits (
 			commit_id VARCHAR(255), 
 			commit_time VARCHAR(255), 
 			commit_message VARCHAR(255), 
-			commit_user VARCHAR(255))")
+			commit_user VARCHAR(255))""")
 
 sql = "INSERT INTO commits (commit_id, commit_time, commit_message, commit_user) VALUES (%s, %s, %s, %s)"
 val = (COMMIT, "2", "3", "4")
