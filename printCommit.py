@@ -13,7 +13,5 @@ sql="SELECT * FROM commits ORDER BY row_id DESC LIMIT 1"
 mycursor.execute(sql)
 last_id = mycursor.fetchone()
 for lastID in last_id:
-    print(lastID)
+    print("The last commit detalis are: "lastID)
 
-
-print("print commit")
