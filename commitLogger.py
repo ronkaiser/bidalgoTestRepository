@@ -13,6 +13,7 @@ mydb = mysql.connector.connect(
 mycursor = mydb.cursor()
 
 mycursor.execute("""CREATE TABLE IF NOT EXISTS commits (
+			row_id int NOT NULL AUTO_INCREMENT,
 			commit_id VARCHAR(255), 
 			commit_time VARCHAR(255), 
 			commit_message VARCHAR(255), 
