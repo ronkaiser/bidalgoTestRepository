@@ -1,5 +1,6 @@
 import mysql.connector
 import os
+import subprocess
 
 COMMIT = os.getenv('GIT_COMMIT')
 # USER = os.system('git log -1 | grep Author | cut -d " " -f2')
