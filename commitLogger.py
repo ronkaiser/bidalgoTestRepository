@@ -12,6 +12,7 @@ mydb = mysql.connector.connect(
   database="mysql"
 )
 
+print("step2")
 mycursor = mydb.cursor()
 
 mycursor.execute("""CREATE TABLE IF NOT EXISTS commits (
@@ -23,6 +24,7 @@ mycursor.execute("""CREATE TABLE IF NOT EXISTS commits (
 			PRIMARY KEY(row_id))""")
 
 sql = "INSERT INTO commits (commit_id, commit_time, commit_message, commit_user) VALUES (%s, %s, %s, %s)"
+print("step3")
 val = (COMMIT, "2", "3", USER)
 mycursor.execute(sql, val)
 
