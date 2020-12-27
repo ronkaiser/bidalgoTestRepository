@@ -2,7 +2,7 @@ import mysql.connector
 import os
 
 COMMIT = os.getenv('GIT_COMMIT')
-USER = os.system('echo | git log -1 | grep Author | cut -d " " -f2')
+USER = os.system(str('git log -1 | grep Author | cut -d " " -f2'))
 
 mydb = mysql.connector.connect(
   host="localhost",
