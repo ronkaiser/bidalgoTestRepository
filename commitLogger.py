@@ -4,6 +4,7 @@ import subprocess
 
 COMMIT = os.getenv('GIT_COMMIT')
 TIME = subprocess.check_output('git show -s --format=%ci', shell=True)
+MESSAGE = subprocess.check_output('git log --format=%B -n 1', shell=True)
 USER = subprocess.check_output('git log -1 | grep Author | cut -d " " -f2', shell=True)
 
 mydb = mysql.connector.connect(
