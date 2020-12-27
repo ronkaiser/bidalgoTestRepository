@@ -25,7 +25,7 @@ mycursor.execute("""CREATE TABLE IF NOT EXISTS commits (
 			PRIMARY KEY(row_id))""")
 
 sql = "INSERT INTO commits (commit_id, commit_time, commit_message, commit_user) VALUES (%s, %s, %s, %s)"
-val = (COMMIT, TIME, "3", USER)
+val = (COMMIT, TIME, MESSAGE, USER)
 mycursor.execute(sql, val)
 
 mydb.commit()
