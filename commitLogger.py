@@ -3,7 +3,7 @@ import os
 
 COMMIT = os.getenv('GIT_COMMIT')
 print("step 0")
-USER = os.system('git log -1 | grep Author | cut -d " " -f2')
+USER = os.system('git log -1 | grep Author | cut -d " " -f2 > /dev/null')
 
 print("step 1")
 print(USER)
